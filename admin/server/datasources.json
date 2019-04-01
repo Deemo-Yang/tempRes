@@ -1,0 +1,34 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  },
+  "mysql": {
+    "host": "49.4.80.58",
+    "port": 3306,
+    "url": "",
+    "database": "dianchi",
+    "password": "Xx197202?",
+    "name": "mysql",
+    "user": "root",
+    "connector": "mysql",
+    "models": {
+      "Myuser": {
+        "1": "{\"password\":\"$2a$10$3ghXiwu6LO5MKlxGRw8mCOHYZ4AK./1xarLER32W6X3ZujR1L11U6\",\"email\":\"aaa@aaa.com\",\"fullname\":\"aaa\",\"id\":1,\"roleId\":1}"
+      },
+      "ACL": {},
+      "RoleMapping": {
+        "7": "{\"principalType\":\"USER\",\"principalId\":\"1\",\"roleId\":1,\"id\":7}"
+      },
+      "Role": {
+        "1": "{\"name\":\"admin\",\"created\":\"2018-01-02T07:15:22.075Z\",\"modified\":\"2018-01-02T07:15:22.075Z\",\"id\":1}"
+      }
+    }
+  }
+}

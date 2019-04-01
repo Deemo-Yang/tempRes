@@ -1,0 +1,41 @@
+var path = require('path');
+var app = require(path.resolve(__dirname, '../server'));
+
+
+app.models.Myuser.create([{
+  username: 'djqsys',
+  email:'djqsys@xx.com',
+  password: 'djq123456'
+}], function(err, users) {
+  if (err) throw err;
+  console.log('Admin account created.');
+
+  // app.models.Myuser.generateVerificationToken(users[0].id, function(err, token){
+  //   app.models.Myuser.confirm(users[0].id, token.id, null, function(err, result) {
+  //     if (err) throw err;
+  //     console.log('Automatic verified; Ok to login');
+  //   });
+  // });
+
+  //create the admin role
+  app.models.Role.create({
+    name: 'admin'
+  }, function(err, role) {
+    if (err) throw err;
+
+    console.log('Created role:', role);
+
+    //assign an admin
+    role.principals.create({
+      principalType: app.models.RoleMapping.USER,
+      principalId: users[0].id
+    }, function(err, principal) {
+      if (err) throw err;
+
+      console.log('Created principal:', principal);
+			// app.dataSources.appversion.disconnect(function(err){
+			// 	if (err) throw err;
+			// });
+    });
+  });
+});

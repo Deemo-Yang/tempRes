@@ -1,0 +1,147 @@
+{
+  "name": "Sciprojectcontent",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "mysql": {
+    "schema": "dianchi",
+    "table": "sciprojectcontent"
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "id": true,
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "scienceprojectid": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "scienceprojectid",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "necessity": {
+      "type": "String",
+      "required": false,
+      "length": 520,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "necessity",
+        "dataType": "varchar",
+        "dataLength": 520,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "feasibility": {
+      "type": "String",
+      "required": false,
+      "length": 520,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "feasibility",
+        "dataType": "varchar",
+        "dataLength": 520,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "content": {
+      "type": "String",
+      "required": false,
+      "length": 520,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "content",
+        "dataType": "varchar",
+        "dataLength": 520,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "technicalindicators": {
+      "type": "String",
+      "required": false,
+      "length": 520,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "technicalindicators",
+        "dataType": "varchar",
+        "dataLength": 520,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "financialindicators": {
+      "type": "String",
+      "required": false,
+      "length": 520,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "financialindicators",
+        "dataType": "varchar",
+        "dataLength": 520,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "ts": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "ts",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
